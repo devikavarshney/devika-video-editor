@@ -140,6 +140,10 @@
     @apply border-border;
   }
 
+  html {
+    @apply dark; /* Force dark mode */
+  }
+
   body {
     @apply bg-gradient-to-br from-background to-background-secondary text-foreground;
     background-attachment: fixed;

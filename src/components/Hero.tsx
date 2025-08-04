@@ -12,7 +12,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">{/* Added pt-24 for nav space */}
       {/* Background with overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
@@ -25,7 +25,7 @@ export const Hero = () => {
       <div className="absolute top-40 right-20 w-16 h-16 neuro-elevated rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }} />
       <div className="absolute bottom-40 left-20 w-24 h-24 neuro-elevated rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
 
-      <div className="relative z-10 container mx-auto px-6">
+      <div className="relative z-10 container mx-auto px-6 pt-8">{/* Added pt-8 for extra space */}
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'animate-slide-up opacity-100' : 'opacity-0 translate-y-10'}`}>
           {/* Profile Image */}
           <div className="mb-8 flex justify-center">
@@ -43,14 +43,14 @@ export const Hero = () => {
             Devika Varshney
           </h1>
           
-          <div className="neuro-inset rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+          <div className="neuro-inset rounded-2xl p-6 mb-8 max-w-2xl mx-auto bg-card/80">
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
               Video Editor
             </h2>
             <p className="text-xl text-muted-foreground mb-4">
               Crafting Visual Stories with Precision & Passion
             </p>
-            <p className="text-lg text-foreground">
+            <p className="text-lg text-card-foreground">
               A dedicated video editor with a knack for transforming raw footage into compelling stories.
               Explore my work and see how I can bring your vision to life.
             </p>
