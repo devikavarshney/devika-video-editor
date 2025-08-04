@@ -2,41 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Neuromorphism design system with cold palette colors. All colors MUST be HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Cold palette background gradients */
+    --background: 210 25% 92%;
+    --background-secondary: 215 30% 90%;
+    --foreground: 215 25% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Neuromorphism surfaces */
+    --card: 210 25% 92%;
+    --card-foreground: 215 25% 20%;
+    --card-elevated: 210 30% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 210 25% 92%;
+    --popover-foreground: 215 25% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Cold primary colors - ice blue theme */
+    --primary: 200 85% 60%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 200 100% 70%;
+    --primary-dark: 200 60% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Cold secondary colors */
+    --secondary: 210 30% 88%;
+    --secondary-foreground: 215 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted cold tones */
+    --muted: 210 20% 85%;
+    --muted-foreground: 215 15% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - cyan touch */
+    --accent: 180 80% 65%;
+    --accent-foreground: 215 25% 20%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Neuromorphism borders and inputs */
+    --border: 210 20% 80%;
+    --input: 210 25% 88%;
+    --ring: 200 85% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Neuromorphism shadows */
+    --shadow-light: 210 30% 98%;
+    --shadow-dark: 210 15% 75%;
+    --shadow-inset-light: 210 40% 96%;
+    --shadow-inset-dark: 210 10% 82%;
+
+    /* Gradients for backgrounds */
+    --gradient-bg: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--card-elevated)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +80,58 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode with cold tones */
+    --background: 215 30% 15%;
+    --background-secondary: 220 25% 18%;
+    --foreground: 210 30% 88%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 30% 15%;
+    --card-foreground: 210 30% 88%;
+    --card-elevated: 220 25% 20%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 30% 15%;
+    --popover-foreground: 210 30% 88%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 85% 65%;
+    --primary-foreground: 215 30% 15%;
+    --primary-glow: 200 100% 75%;
+    --primary-dark: 200 60% 50%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 20% 25%;
+    --secondary-foreground: 210 30% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 22%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 80% 70%;
+    --accent-foreground: 215 30% 15%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 210 30% 88%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 15% 25%;
+    --input: 220 20% 22%;
+    --ring: 200 85% 65%;
+
+    /* Dark neuromorphism shadows */
+    --shadow-light: 220 30% 22%;
+    --shadow-dark: 215 25% 12%;
+    --shadow-inset-light: 220 25% 18%;
+    --shadow-inset-dark: 215 20% 10%;
+
+    /* Dark mode gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--card-elevated)) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+
+    --sidebar-background: 215 30% 15%;
+    --sidebar-foreground: 210 30% 88%;
+    --sidebar-primary: 200 85% 65%;
+    --sidebar-primary-foreground: 215 30% 15%;
+    --sidebar-accent: 220 20% 25%;
+    --sidebar-accent-foreground: 210 30% 85%;
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 200 85% 65%;
   }
 }
 
@@ -100,6 +141,99 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-br from-background to-background-secondary text-foreground;
+    background-attachment: fixed;
+  }
+
+  /* Neuromorphism utilities */
+  .neuro-elevated {
+    background: var(--gradient-card);
+    box-shadow: 
+      8px 8px 16px hsl(var(--shadow-dark)),
+      -8px -8px 16px hsl(var(--shadow-light));
+    border: 1px solid hsl(var(--border));
+  }
+
+  .neuro-inset {
+    background: hsl(var(--card));
+    box-shadow: 
+      inset 4px 4px 8px hsl(var(--shadow-inset-dark)),
+      inset -4px -4px 8px hsl(var(--shadow-inset-light));
+  }
+
+  .neuro-button {
+    background: var(--gradient-card);
+    box-shadow: 
+      4px 4px 8px hsl(var(--shadow-dark)),
+      -4px -4px 8px hsl(var(--shadow-light));
+    transition: var(--transition-smooth);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .neuro-button:hover {
+    box-shadow: 
+      6px 6px 12px hsl(var(--shadow-dark)),
+      -6px -6px 12px hsl(var(--shadow-light));
+    transform: translateY(-1px);
+  }
+
+  .neuro-button:active {
+    box-shadow: 
+      inset 2px 2px 4px hsl(var(--shadow-dark)),
+      inset -2px -2px 4px hsl(var(--shadow-light));
+    transform: translateY(0);
+  }
+
+  .glow-effect {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--primary) / 0.1);
+  }
+
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 
+        0 0 20px hsl(var(--primary) / 0.3),
+        0 0 40px hsl(var(--primary) / 0.2);
+    }
+    50% {
+      box-shadow: 
+        0 0 30px hsl(var(--primary) / 0.5),
+        0 0 60px hsl(var(--primary) / 0.3);
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
   }
 }
