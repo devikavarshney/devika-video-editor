@@ -80,58 +80,58 @@
   }
 
   .dark {
-    /* Dark mode with cold tones */
-    --background: 215 30% 15%;
-    --background-secondary: 220 25% 18%;
-    --foreground: 210 30% 88%;
+    /* Dark mode with cold tones and better contrast */
+    --background: 215 30% 8%;
+    --background-secondary: 220 25% 12%;
+    --foreground: 210 30% 95%;
 
-    --card: 215 30% 15%;
-    --card-foreground: 210 30% 88%;
-    --card-elevated: 220 25% 20%;
+    --card: 215 30% 12%;
+    --card-foreground: 210 30% 95%;
+    --card-elevated: 220 25% 16%;
 
-    --popover: 215 30% 15%;
-    --popover-foreground: 210 30% 88%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 210 30% 95%;
 
-    --primary: 200 85% 65%;
-    --primary-foreground: 215 30% 15%;
-    --primary-glow: 200 100% 75%;
-    --primary-dark: 200 60% 50%;
+    --primary: 200 85% 70%;
+    --primary-foreground: 215 30% 8%;
+    --primary-glow: 200 100% 80%;
+    --primary-dark: 200 60% 55%;
 
-    --secondary: 220 20% 25%;
-    --secondary-foreground: 210 30% 85%;
+    --secondary: 220 20% 20%;
+    --secondary-foreground: 210 30% 90%;
 
-    --muted: 220 15% 22%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 15% 70%;
 
-    --accent: 180 80% 70%;
-    --accent-foreground: 215 30% 15%;
+    --accent: 180 80% 75%;
+    --accent-foreground: 215 30% 8%;
 
-    --destructive: 0 70% 60%;
-    --destructive-foreground: 210 30% 88%;
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 210 30% 95%;
 
-    --border: 220 15% 25%;
-    --input: 220 20% 22%;
-    --ring: 200 85% 65%;
+    --border: 220 15% 22%;
+    --input: 220 20% 18%;
+    --ring: 200 85% 70%;
 
-    /* Dark neuromorphism shadows */
-    --shadow-light: 220 30% 22%;
-    --shadow-dark: 215 25% 12%;
-    --shadow-inset-light: 220 25% 18%;
-    --shadow-inset-dark: 215 20% 10%;
+    /* Dark neuromorphism shadows with better visibility */
+    --shadow-light: 220 30% 18%;
+    --shadow-dark: 215 25% 5%;
+    --shadow-inset-light: 220 25% 15%;
+    --shadow-inset-dark: 215 20% 6%;
 
     /* Dark mode gradients */
     --gradient-bg: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(var(--card-elevated)) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
 
-    --sidebar-background: 215 30% 15%;
-    --sidebar-foreground: 210 30% 88%;
-    --sidebar-primary: 200 85% 65%;
-    --sidebar-primary-foreground: 215 30% 15%;
-    --sidebar-accent: 220 20% 25%;
-    --sidebar-accent-foreground: 210 30% 85%;
-    --sidebar-border: 220 15% 25%;
-    --sidebar-ring: 200 85% 65%;
+    --sidebar-background: 215 30% 8%;
+    --sidebar-foreground: 210 30% 95%;
+    --sidebar-primary: 200 85% 70%;
+    --sidebar-primary-foreground: 215 30% 8%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 210 30% 90%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 200 85% 70%;
   }
 }
 

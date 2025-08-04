@@ -64,7 +64,7 @@ export const About = () => {
             <div className="space-y-8">
               <Card className="neuro-elevated p-8">
                 <h3 className="text-2xl font-semibold text-primary mb-6">My Story</h3>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-4 text-foreground leading-relaxed">{/* Changed from muted-foreground to foreground */}
                   <p>
                     I've always been deeply captivated by the magic of films — the stories they tell, 
                     the emotions they evoke, and the worlds they create. That love turned into a quiet 
@@ -85,7 +85,7 @@ export const About = () => {
               {/* USP */}
               <Card className="neuro-elevated p-8 border-primary/20">
                 <h3 className="text-xl font-semibold text-accent mb-4">What Sets Me Apart</h3>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">{/* Changed from muted-foreground to foreground */}
                   My ability to blend creativity with technical precision, ensuring each video 
                   not only meets but exceeds client expectations.
                 </p>

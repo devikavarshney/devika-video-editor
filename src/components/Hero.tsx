@@ -47,10 +47,10 @@ export const Hero = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-4">
               Video Editor
             </h2>
-            <p className="text-xl text-muted-foreground mb-4">
+            <p className="text-xl text-accent mb-4 font-medium">
               Crafting Visual Stories with Precision & Passion
             </p>
-            <p className="text-lg text-card-foreground">
+            <p className="text-lg text-foreground">
               A dedicated video editor with a knack for transforming raw footage into compelling stories.
               Explore my work and see how I can bring your vision to life.
             </p>

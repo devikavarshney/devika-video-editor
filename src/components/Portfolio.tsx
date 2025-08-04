@@ -81,7 +81,7 @@ export const Portfolio = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               My Work
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-foreground max-w-2xl mx-auto">{/* Changed from muted-foreground */}
               A showcase of recent projects demonstrating storytelling excellence and technical expertise
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mt-6" />
@@ -109,7 +109,7 @@ export const Portfolio = () => {
                     
                     <div>
                       <h4 className="font-semibold text-foreground mb-2">{project.title}</h4>
-                      <p className="text-sm text-muted-foreground mb-3">{project.description}</p>
+                      <p className="text-sm text-foreground mb-3">{project.description}</p>{/* Changed from muted-foreground */}
                     </div>
 
                     <div className="space-y-2">
