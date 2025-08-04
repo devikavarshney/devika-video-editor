@@ -141,7 +141,7 @@
   }
 
   html {
-    @apply dark; /* Force dark mode */
+    color-scheme: dark;
   }
 
   body {
